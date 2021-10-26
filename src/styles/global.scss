@@ -1,3 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 :root {
     --color-green: #6cd860;
+    --color-white: #ffffff;
+    --color-blue: #2e4dab;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
 }

@@ -1,0 +1,98 @@
+.headerContainer {
+    background-color: #000;
+    color: var(--color-white);
+    
+    padding: 0 15px;
+    
+    > div {
+        max-width: 1200px;
+        height: 4.5rem;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > div {
+            display: flex;
+            nav {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                a {
+                    color: var(--color-white);
+                    text-decoration: none;
+
+                    font-weight: 600;
+                    font-size: 1rem;
+
+                    transition: .1s;
+                    
+                    &:hover {
+                        color: var(--color-green);
+                    }
+                }
+                
+                &::after {
+                    content: '';
+                    display: block;
+                    background-color: #fff;
+                    height: 1rem;
+                    width: 1px;
+                    margin-right: 2rem;
+
+                }
+            }
+
+            .modalUser {
+                display: flex;
+                align-items: center;
+
+                cursor: pointer;
+
+                .userImg {
+                    border: 2px solid var(--color-white);
+                    border-radius: 100%;
+
+                    width: 39px;
+                    height: 39px;
+
+                    display: grid;
+                    place-items: center;
+
+                    transition: .2s;
+
+                    svg {
+                        height: 24px;
+                        width: 24px;
+                        line-height: 4rem;
+                        // font-size: 40px;
+                        // color: var(--color-green);
+                    }
+                }
+
+                span {
+                    font-weight: 600;
+                    margin: 0 1rem;
+                }
+
+                &:hover {
+                    color: var(--color-green);
+
+                    .userImg {
+                        border-color: var(--color-green);
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        line-height: 4rem;
+        height: 41px;
+        // filter: invert(1);
+    }
+
+}

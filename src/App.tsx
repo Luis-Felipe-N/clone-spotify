@@ -1,5 +1,5 @@
 import { Home } from "./pages/Home"
-import 'src/styles/global.scss'
+import './styles/global.scss'
 
 function App() {
 
