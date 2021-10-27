@@ -41,49 +41,115 @@
                     background-color: #fff;
                     height: 1rem;
                     width: 1px;
-                    margin-right: 2rem;
+                    // margin-right: 2rem;
 
                 }
             }
 
-            .modalUser {
-                display: flex;
-                align-items: center;
+            .infoUser {
+                padding-left:  2rem;
+                width: 100%;
+                position: relative;
 
-                cursor: pointer;
-
-                .userImg {
-                    border: 2px solid var(--color-white);
-                    border-radius: 100%;
-
-                    width: 39px;
-                    height: 39px;
-
-                    display: grid;
-                    place-items: center;
-
-                    transition: .2s;
-
-                    svg {
-                        height: 24px;
-                        width: 24px;
-                        line-height: 4rem;
-                        // font-size: 40px;
-                        // color: var(--color-green);
+                .modalUser {
+                    background-color: transparent;
+                    color: var(--color-white);
+                    border: 0;
+    
+                    display: flex;
+                    align-items: center;
+    
+                    cursor: pointer;
+    
+                    .userImg {
+                        border: 2px solid var(--color-white);
+                        border-radius: 100%;
+    
+                        width: 39px;
+                        height: 39px;
+    
+                        display: grid;
+                        place-items: center;
+    
+                        transition: .2s;
+    
+                        svg {
+                            height: 24px;
+                            width: 24px;
+                            line-height: 4rem;
+                            // font-size: 40px;
+                            // color: var(--color-green);
+                        }
+                    }
+    
+                    span {
+                        font-weight: 600;
+                        margin: 0 1rem;
+                    }
+    
+                    &:hover {
+                        color: var(--color-green);
+    
+                        .userImg {
+                            border-color: var(--color-green);
+                        }
                     }
                 }
-
-                span {
-                    font-weight: 600;
-                    margin: 0 1rem;
-                }
-
-                &:hover {
+                .modalUser.active {
                     color: var(--color-green);
-
+    
                     .userImg {
                         border-color: var(--color-green);
                     }
+                }
+                .dropMenu{
+                    display: none;
+                    top: 3.4rem;
+                    left: 0;
+    
+                    width: 100%;
+                    border-radius: 5px;
+    
+                    background-color: var(--color-white);
+                    position: absolute;
+    
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        padding: .4rem 1rem ;
+                        font-weight: 600;
+    
+                        &:first-child {
+                            color: var(--color-black-900);
+                        }
+    
+                        &:last-child {
+                            color: var(--color-black-100);
+                        }
+                    }
+                }
+    
+                .dropMenu.active {
+
+                    animation: .2s toUp;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: -30px;
+                        right: 10px;
+
+                        width: 0;
+                        height: 0;
+
+                        border: 15px solid;                        
+                        border-left: 14px solid transparent;
+                        border-right: 14px solid transparent;
+                        border-top: 15px solid transparent;
+                    }
+
+
                 }
             }
         }
@@ -91,8 +157,95 @@
 
     .logo {
         line-height: 4rem;
-        height: 41px;
-        // filter: invert(1);
+        height: 41px;   
     }
 
+}
+@keyframes toUp {
+    from {
+        opacity: 0;
+        top: 4rem;
+    } to {
+        opacity: 1;
+        top: 3.4rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .headerContainer {
+        > div {
+            > div {
+                position: fixed;
+                top: 0;
+                right: 0;
+
+                background-color: #000;
+
+                min-height: 100vh;
+                max-width: 400px;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                
+                padding: 3rem;
+
+                nav {
+                    width: 100%;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 25px;
+
+                    a {
+                        font-size: 2rem;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        background-color: #fff;
+                        height: 2px;
+                        width: 1rem;
+                        // margin-right: 2rem;
+    
+                    }
+                }
+
+                .infoUser {
+                    padding: 0;
+
+                    .dropMenu {
+                        display: flex;
+
+                        background-color: var(--color-black-900);
+
+                        font-size: 2rem;
+                        
+                        a {
+                            color: #d9dadc !important;
+                            font-weight: 400;
+                            padding: 0;
+                            margin-bottom: 1rem;
+
+                            &:hover {
+                                color: var(--color-green);
+                            }
+                        }
+                    }
+
+                    .modalUser {
+                        display: none;
+                    }
+                }
+                .logoMenu {
+                    position: absolute;
+                    bottom: 3rem;
+                    
+                    height: 30px !important;
+                }
+
+
+            }
+        }
+    }
 }

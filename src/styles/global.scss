@@ -9,8 +9,15 @@
     --color-green: #6cd860;
     --color-white: #ffffff;
     --color-blue: #2e4dab;
+
+    --color-black-100: #9195a1;
+    --color-black-900: black;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }

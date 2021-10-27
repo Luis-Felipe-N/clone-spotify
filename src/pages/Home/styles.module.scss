@@ -2,8 +2,61 @@
     display: grid;
     place-items: center;
     height: 100vh;
+
     background-color: var(--color-blue);
-    // min-height: calc(100vh - 4rem);
+    background-image: url('https://www-growth.scdn.co/static/home/bursts-tablet.svg');
+    background-position: center;
+
+    div {
+        padding: 0 15px;
+        max-width: 1000px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        text-align: center;
+
+        color: var(--color-green);
+
+        h1 { 
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 8rem;
+        }
+
+        a {
+            background-color: var(--color-green);
+            color: var(--color-blue);
+
+            font-size: .875rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+
+            transition: transform .1s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            &:focus {
+                box-shadow:0 0 0 3px var(--color-blue), 0 0 0 6px var(--color-white),  ;
+            }
+        }
+    }
+}
+
+.homeContainerLogged {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+    background-color: var(--color-blue);
     background-image: url('https://www-growth.scdn.co/static/home/bursts-tablet.svg');
     background-size: 100%;
     background-position: center;
@@ -48,6 +101,15 @@
             &:focus {
                 box-shadow:0 0 0 3px var(--color-blue), 0 0 0 6px var(--color-white),  ;
             }
+        }
+    }
+}
+
+@media ( max-width: 800px ) {
+    .homeContainer, .homeContainerLogged {
+        div h1 {
+            font-size: 5rem;
+            line-height: 4.5rem;
         }
     }
 }
