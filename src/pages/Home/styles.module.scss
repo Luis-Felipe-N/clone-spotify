@@ -54,16 +54,16 @@
 .homeContainerLogged {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 130vh;
     
     background-color: var(--color-blue);
     background-image: url('https://www-growth.scdn.co/static/home/bursts-tablet.svg');
-    background-size: 100%;
-    background-position: center;
+    background-size: 103%;
+    background-position:  center;
 
     div {
         padding: 0 15px;
-        max-width: 700px;
+        max-width: 1200px;
 
         display: flex;
         align-items: center;
@@ -105,11 +105,22 @@
     }
 }
 
-@media ( max-width: 800px ) {
+@media ( max-width: 900px ) {
     .homeContainer, .homeContainerLogged {
+        background-size: 150%;
         div h1 {
             font-size: 5rem;
             line-height: 4.5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .homeContainer, .homeContainerLogged {
+        background-size: 200%;
+        div h1 {
+            font-size: 3rem;
+            line-height: 3rem;
         }
     }
 }

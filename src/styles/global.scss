@@ -11,13 +11,19 @@
     --color-blue: #2e4dab;
 
     --color-black-100: #9195a1;
+    --color-black-700: #222225;
     --color-black-900: black;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+    color: var(--color-white);
 }
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }

@@ -1,0 +1,106 @@
+.footerContainer {
+    background-color: var(--color-black-900);
+    padding: 4rem;
+
+    section {
+        margin-top: 2rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        white-space: nowrap;
+
+        .logo {
+            height: 40px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 3rem;
+
+            div {
+
+                h4 {
+                    color: var(--color-black-100);
+                    margin-bottom: 1.8rem;
+
+                    font-size: .75rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                ul li {
+                    margin-bottom: 1.7rem;
+
+                    a {
+                        color: var(--color-white);
+                        font-weight: 500;
+
+                        transition: .2s;
+
+                        &:hover {
+                            color: var(--color-green);
+                        }
+                    }
+                }
+            }
+        }
+
+        .socialMidia {
+            margin-left: auto;
+
+            ul {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-radius: 100%;
+                    
+                    width: 55px;
+                    height: 55px;
+
+                    background-color: var(--color-black-700);
+                    color: var(--color-white);
+
+                    &:hover {
+                        color: var(--color-green);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1036px) {
+    .footerContainer {
+        section {
+            .socialMidia {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .footerContainer {
+        section {
+            flex-direction: column;
+            .links {
+                gap: 2rem;
+                flex-direction: column;
+                div {
+                    ul li {
+                        margin-bottom: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}
