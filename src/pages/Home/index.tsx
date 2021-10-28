@@ -14,7 +14,7 @@ import { useState } from 'react'
                     <div>
                         <h1>Suas músicas estão com saudade</h1>
                         <p>Continue curtindo de onde parou.</p>
-                        <a href="#">Acesse o web player</a>
+                        <a href="/open">Acesse o web player</a>
                     </div>
                 </main>
            ) : (
@@ -22,7 +22,7 @@ import { useState } from 'react'
                     <div>
                         <h1     >Escutar muda tudo</h1>
                         <p>Milhões de músicas e podcasts para explorar. E nem precisa de cartão de crédito.</p>
-                        <a href="#">Acesse o web player</a>
+                        <a href="/open">Acesse o web player</a>
                     </div>
                 </main>
            )}

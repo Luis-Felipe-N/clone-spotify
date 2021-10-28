@@ -1,0 +1,42 @@
+.menuPrimaryContainer {
+    background-color: var(--color-black-900);
+    width: 17rem;
+
+    padding: 1.5rem .5rem;
+
+    .logo {
+        height: 39px;
+        margin: 0 1rem;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding: .7rem 1rem;
+
+        border-radius: 5px;
+        color: var(--color-white);
+        font-weight: 600;
+        font-size: .875rem;
+        
+        .iconActive {
+            display: none;
+        }
+
+        
+    }
+    nav {
+        margin: 1.3rem 0;
+        ul li {
+            width: 100%;
+
+            &:not(:last-child) {
+                // margin-bottom: .5rem;
+            }
+            
+            .active {
+                background-color: var(--color-black-600);                
+            }
+        }
+    }
+}
