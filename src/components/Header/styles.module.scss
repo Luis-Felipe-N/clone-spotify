@@ -255,7 +255,7 @@
                 
                 background-color: #000;
                 
-                min-height: 100vh;
+                height: 100vh;
                 max-width: 400px;
                 width: 100%;
     
@@ -339,22 +339,6 @@
                     transition: .2s;
                     transition-delay: .2s;
                     transform: translateX(0);
-                }
-                &::after {
-                    content: '';
-                    opacity: 1;
-                    position: absolute;
-                    top: 4rem;
-                    bottom: 0;
-                    left: -110%;
-                    right: 0;
-
-                    width: 200vw;
-                    height: 100vh;
-
-                    background-color: rgba(0, 0, 0, 0.5);
-
-                    z-index: -1;
                 }
 
             }

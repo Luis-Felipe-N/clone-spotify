@@ -76,10 +76,52 @@
             }
         }
     }
+
+    .botoom {
+        display: flex;
+        justify-content: space-between;
+        
+        margin-top: 4rem;
+        
+        ul {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            font-size: .5rem;
+            font-weight: 500;
+             
+            a {
+                color: var(--color-black-100);
+
+                &:hover {
+                    color: var(--color-green);
+                }
+            }
+        }
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+            
+            font-size: .75rem;
+            color: var(--color-black-100);
+
+            white-space: nowrap;
+
+            a {
+                color: var(--color-black-100);
+                display: block;
+            }
+        }
+    }
 }
 
 @media (max-width: 1036px) {
     .footerContainer {
+        padding: 2rem 5%;
         section {
             .socialMidia {
                 margin-left: 0;

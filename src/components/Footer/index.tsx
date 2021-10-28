@@ -60,8 +60,18 @@ export function Footer() {
                     </ul>
                 </div>
             </section>
-            <div>
-
+            <div className={styles.botoom}>
+                <ul>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Centro de Privacidade</a></li>
+                    <li><a href="#">Centro de Privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Sobre anúncios</a></li>
+                </ul>
+                <div>
+                    <a href="https://www.spotify.com/br/select-your-country-region/" target="_blank" rel="noopener noreferrer">Brasil</a>
+                    <span>© 2021 Spotify AB</span>                                
+                </div>
             </div>
         </footer>
     )
